@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="Tiny">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no,width=device-width">
+  <link rel="stylesheet" href="lib/ionic/css/ionic.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="lib/ionic/js/ionic.bundle.min.js"></script>
+  <script src="js/appwy.js"></script>
+  <title>我</title>
+  <style>
+    img{
+      display:block;
+      max-width:100%;
+    }
+    .bar{
+      height:170px;
+    }
+    .bar-subheader{
+      height:45px;
+      top:170px;
+         }
+  </style>
+</head>
+<body>
+<!--顶部-->
+<div class="bar bar-header bar-assertive">
+  <div class="title title-right">
+    <i class="icon ion-gear-a"></i>
+    <span style="font-size:14px;">设置</span>
+  </div>
+  <div style="margin:15px auto;" ><img style="width:70px;border-radius:50%;" src="img/1.jpg" alt=""></div>
+  <h2 style="position:absolute;top:90px;" class="title">立即登录</h2>
+  <p style="position:absolute;top:115px;font-size:13px;color:yellow;" class="title">赢积分 抢大礼!</p>
+</div>
+<div style="padding:0;" class="bar bar-subheader  ">
+  <!--副导航-->
+  <div style="height:55px;background:white;" class="tabs tabs-stable tabs-icon-top">
+    <a style="border-right:1px solid lightgrey;" class="tab-item ">
+      <i style="font-size:20px;line-height:32px;" class="icon ion-ios-clock "></i><span >阅读</span>
+    </a>
+    <a style="border-right:1px solid lightgrey;" class="tab-item  ">
+      <i style="font-size:20px;line-height:32px;" class="icon ion-android-favorite "></i>收藏
+    </a>
+    <a style="border-right:1px solid lightgrey;" class="tab-item">
+      <i style="font-size:20px;line-height:32px;" class="icon ion-android-create"></i>跟帖
+    </a>
+    <a  class="tab-item  ">
+      <i style="font-size:20px;line-height:32px;" class="icon ion-social-yen "></i>金币
+    </a>
+  </div>
+</div>
+<div style="top:215px;overflow-y:auto;" class="scroll-content has-header has-footer has-subheader stable-bg">
+  <ul style="margin-bottom:10px;" class="list">
+  <li style="margin-top:10px;border:none;height:40px;" class="item item-icon-left ">
+    <i style="font-size:20px;"  class="icon ion-android-textsms assertive"></i>
+    <p>我的消息</p>
+  </li>
+</ul>
+    <ul style="margin-bottom:10px;" class="list">
+    <li style="border:none;height:40px;" class="item item-icon-left">
+      <i style="font-size:20px;"  class="icon ion-ios-calendar energized"> </i>
+      <p>金币商场</p>
+    </li>
+      <li style="height:40px;" class="item item-icon-left">
+        <i style="font-size:20px;"  class="icon ion-social-yen assertive"> </i>
+        <p>金币任务</p>
+      </li>
+      <li style="height:40px;border-bottom:none;" class="item item-icon-left">
+        <i style="font-size:20px;"  class="icon ion-bag assertive"> </i>
+        <p>我的钱包</p>
+      </li>
+  </ul>
+  <ul style="margin-bottom:5px;" class="list">
+    <li style="border:none;height:40px;" class="item item-icon-left">
+      <i style="font-size:20px;"  class="icon ion-contrast positive"><p>夜间模式</p>
+        <label style="position:absolute;left:250px;" class="toggle toggle-assertive">
+          <input   type="checkbox">
+          <div class="track">
+            <div class="handle"></div>
+          </div>
+        </label>
+         </i>
+
+      <p>
+      </p>
+    </li>
+    <li style="height:40px;" class="item item-icon-left">
+      <i style="font-size:20px;"  class="icon ion-android-download calm"> </i>
+      <p>离线阅读</p>
+
+    </li>
+    <li style="height:40px;" class="item item-icon-left">
+      <i style="font-size:20px;"  class="icon ion-social-twitter royal"> </i>
+      <p>活动广场</p>
+    </li>
+    <li style="height:40px;height:40px;" class="item item-icon-left">
+      <i style="font-size:20px;"  class="icon ion-ios-list calm"> </i>
+      <p>意见反馈</p>
+    </li>
+  </ul>
+</div>
+<!--底部tabs导航-->
+<div style="background-color:white;"class="tabs tabs-stable tabs-icon-top">
+  <a class="tab-item " href="网易首页.html">
+    <i class="icon ion-ios-paper "></i>新闻
+  </a>
+  <a class="tab-item  " href="直播.html">
+    <i class="icon ion-social-youtube " ></i>直播
+  </a>
+  <a class="tab-item" href="话题.html">
+    <i class="icon ion-android-hangout"></i>话题
+  </a>
+  <a class="tab-item assertive active" href="我.html">
+    <i class="icon ion-android-person "></i>我
+  </a>
+</div>
+</body>
+</html>

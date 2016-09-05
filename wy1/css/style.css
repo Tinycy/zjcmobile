@@ -1,0 +1,24 @@
+/* Empty. Add your own CSS if you like */
+
+*{
+  box-sizing: border-box;
+}
+.bar>.item-icon-right>span{
+      position:absolute;
+      right:113px;
+      top:10px;
+      font-size:1px;
+}
+.bar>.item-icon-right>.ion-ios-search{
+  position:absolute;
+  right:100px;
+}
+.bar>.tabs-striped>.tabs>.tab-item{
+  margin:0;
+  border:none;
+  background:none;
+}
+.tabs-striped>.assertive{
+  border-bottom:#ef473a;
+}
+

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="Tiny">
+<head>
+    <meta charset="UTF-8">
+    <title>网易首页</title>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no,width=device-width">
+    <link rel="stylesheet" href="lib/ionic/css/ionic.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="lib/ionic/js/ionic.bundle.min.js"></script>
+    <script src="js/appwy.js"></script>
+    <style>
+        img{
+            display:block;
+            max-width:100%;
+        }
+    .slider-pager-page{
+        left:150px;
+        position:relative;
+        font-size:2px;
+    }
+
+    </style>
+</head>
+<body>
+<!--顶部导航-->
+<div class="bar bar-header bar-assertive">
+    <div class="title title-left ">網易</div>
+    <div class="item-icon-right">
+        <i class="icon ion-ios-search"></i>
+        <span>搜</span>
+    </div>
+    <div class="item-icon-right">
+        <div style="width:30px;height:20px;border:solid 1px white;position:absolute;right:5px;font-size:8px;top:10px;text-align:center;">
+            <span >直播</span>
+        </div>
+    </div>
+</div>
+<!--tabs导航-->
+<ion-tabs class="tabs-top tabs-striped tabs-color-assertive" ng-controller="tab">
+    <ion-tab title="头条" on-deselect="dosomething()">
+        <ion-ivew>
+            <ion-content class="assertive has-footer" ng-controller="resh">
+                <ion-refresher pulling-text="正在进行拉动刷新" on-refresh="doRefresh()">
+                </ion-refresher>
+                <!--<ul class="list">-->
+                    <!--<li class="item" ng-repeat="item in items">{{item}}</li>-->
+                <!--</ul>-->
+                <!--这是轮播-->
+                <ion-slide-box does-continue="true" show-parger="true" auto-play="true"active-aside="index" pager-click="go(index)">
+                    <ion-slide>
+                    <img src="img/4.jpg" alt="">
+                        <!--<span style="color:white;position:absolute;top:220px;font-size:10px;padding-left:20px;">-->
+                            <!--假期余额不足，开学金币来补补-->
+                        <!--</span>-->
+                </ion-slide>
+
+                    <ion-slide>
+                        <img src="img/5.jpg" alt="">
+                    </ion-slide>
+                    <ion-slide>
+                        <img src="img/6.jpg" alt="">
+                    </ion-slide>
+                </ion-slide-box>
+                    <!--列表内容-->
+                <ul class="list item-text-wrap">
+                    <li class="item item-thumbnail-left">
+                        <img src="img/xjp.JPEG" alt="">
+                        <h2>习近平：按照时间表路线图推进改革</h2>
+                        <span style="position:absolute;right:5px;bottom:5px;color:blue;font-size:10px;background:lightsteelblue">置顶</span>
+                    </li>
+                    <li class="item item-thumbnail-left">
+                        <img src="img/ben.png" alt="">
+                        <h2>白银杀人案记忆：好友梦中听到死者呼喊“姐姐救救我”</h2>
+                        <br>
+                        <p>新闻热点</p>
+                        <span style="position:absolute;right:5px;bottom:5px;color:red;font-size:10px;background:lightpink">专题</span>
+                    </li>
+                    <li class="item item-thumbnail-left">
+                        <img src="img/3.jpg" alt="">
+                        <h2>郑州一高校现山寨版连体“凯旋门”造价300万</h2>
+                        <br>
+                        <p>郑州本地</p>
+
+          <span style="position:absolute;right:5px;bottom:5px;color:red;font-size:5px;background:lightpink">
+            <div style="display:inline-block;" class="icon-item-left">
+                <i class="icon ion-location"></i>
+            </div>郑州</span>
+                    </li>
+                    <li class="item item-thumbnail-left">
+                        <img src="img/3.jpg" alt="">
+                        <h2>郑州一高校现山寨版连体“凯旋门”造价300万,郑州一高校现山寨版连体“凯旋门”造价300万</h2>
+                    </li>
+                </ul>
+            </ion-content>
+        </ion-ivew>
+    </ion-tab>
+    <ion-tab title="精选" on-deselect="dosomething()">
+    <ion-ivew>
+        <ion-content class="assertive">
+            这是精选的页面
+        </ion-content>
+    </ion-ivew>
+</ion-tab>
+    <ion-tab title="娱乐" on-deselect="dosomething()">
+        <ion-ivew>
+            <ion-content class="assertive">
+                这里是娱乐的页面
+            </ion-content>
+        </ion-ivew>
+    </ion-tab>
+</ion-tabs>
+<!--底部tabs导航-->
+<div class="tabs tabs-stable tabs-icon-top">
+    <a class="tab-item active assertive" href="网易首页.html" >
+        <i class="icon ion-ios-paper assertive"></i>新闻
+    </a>
+    <a class="tab-item" href="直播.html">
+        <i class="icon ion-social-youtube"></i>直播
+    </a>
+    <a class="tab-item" href="话题.html">
+        <i class="icon ion-android-hangout"></i>话题
+    </a>
+    <a class="tab-item" href="我.html">
+        <i class="icon ion-android-person"></i>我
+    </a>
+</div>
+
+
+</body>
+</html>

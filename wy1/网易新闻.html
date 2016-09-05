@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="Tiny">
+<head>
+    <meta charset="UTF-8">
+    <title>网易新闻</title>
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no,width=device-width">
+  <link rel="stylesheet" href="lib/ionic/css/ionic.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="lib/ionic/js/ionic.bundle.min.js"></script>
+  <script src="js/appwy.js"></script>
+  <style>
+    img{
+      display:block;
+      max-width:100%;
+    }
+  </style>
+</head>
+<body>
+    <!--顶部导航-->
+    <div class="bar bar-header bar-assertive">
+      <div class="title title-left ">網易</div>
+      <div class="item-icon-right">
+        <i class="icon ion-ios-search"></i>
+        <span>搜</span>
+      </div>
+      <div class="item-icon-right">
+        <div style="width:30px;height:20px;border:solid 1px white;position:absolute;right:5px;font-size:8px;top:10px;text-align:center;">
+          <span >直播</span>
+        </div>
+      </div>
+    </div>
+    <!--tabs导航-->
+    <div class="tabs tabs-top tabs-stable tabs-striped subheader">
+      <a style="color:red;border-bottom:red 1px solid;" class="tab-item active ">头条</a>
+      <a class="tab-item ">精选</a>
+      <a class="tab-item">娱乐</a>
+      <a class="tab-item">体育</a>
+      <a class="tab-item">网易号</a>
+      <div class="item-icon-right">
+        <i class="icon ion-ios-arrow-down"></i>
+      </div>
+    </div>
+    <!--<ion-slide-box auto-play="true" does-continue="true" slide-interval="3000" >-->
+    <!--<ion-slide>-->
+    <!--<img src="img/2.jpg" alt="">-->
+    <!--</ion-slide>-->
+    <!--<ion-slide>-->
+    <!--<img src="img/5.jpg" alt="">-->
+    <!--</ion-slide>-->
+    <!--<ion-slide>-->
+    <!--<img src="img/4.jpg" alt="">-->
+    <!--</ion-slide>-->
+    <!--</ion-slide-box>-->
+    <div style="overflow-y:auto;" class="scroll-content has-header has-subheader has-footer">
+
+        <!--<div class="item item-image  ">-->
+        <!--<img src="img/b.jpg" >-->
+      <!--</div>-->
+      <ul class="list item-text-wrap">
+        <li class="item item-thumbnail-left">
+          <img src="img/xjp.JPEG" alt="">
+          <h2>习近平：按照时间表路线图推进改革</h2>
+          <span style="position:absolute;right:5px;bottom:5px;color:blue;font-size:10px;background:lightsteelblue">置顶</span>
+        </li>
+        <li class="item item-thumbnail-left">
+          <img src="img/ben.png" alt="">
+          <h2>白银杀人案记忆：好友梦中听到死者呼喊“姐姐救救我”</h2>
+          <br>
+          <p>新闻热点</p>
+          <span style="position:absolute;right:5px;bottom:5px;color:red;font-size:10px;background:lightpink">专题</span>
+        </li>
+        <li class="item item-thumbnail-left">
+          <img src="img/3.jpg" alt="">
+          <h2>郑州一高校现山寨版连体“凯旋门”造价300万</h2>
+          <br>
+          <p>郑州本地</p>
+
+          <span style="position:absolute;right:5px;bottom:5px;color:red;font-size:5px;background:lightpink">
+            <div style="display:inline-block;" class="icon-item-left">
+            <i class="icon ion-location"></i>
+          </div>郑州</span>
+        </li>
+        <li class="item item-thumbnail-left">
+          <img src="img/3.jpg" alt="">
+          <h2>郑州一高校现山寨版连体“凯旋门”造价300万,郑州一高校现山寨版连体“凯旋门”造价300万</h2>
+        </li>
+      </ul>
+      <p style="padding-left:10px;">国足球员待遇真不错 座驾绝对世界一流</p>
+      <div class="row">
+
+          <div class="col"><img  src="img/1.jpg" alt=""></div>
+          <div class="col"><img  src="img/1.jpg" alt=""></div>
+      </div>
+    </div>
+    <!--底部tabs导航-->
+    <div class="tabs tabs-stable tabs-icon-top">
+      <a class="tab-item active assertive">
+        <i class="icon ion-ios-paper assertive"></i>新闻
+      </a>
+      <a class="tab-item">
+        <i class="icon ion-social-youtube"></i>直播
+      </a>
+      <a class="tab-item">
+        <i class="icon ion-android-hangout"></i>话题
+      </a>
+      <a class="tab-item">
+        <i class="icon ion-android-person"></i>我
+      </a>
+    </div>
+
+
+</body>
+</html>

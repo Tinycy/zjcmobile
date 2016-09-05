@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="Tiny">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no,width=device-width">
+  <link rel="stylesheet" href="lib/ionic/css/ionic.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="lib/ionic/js/ionic.bundle.min.js"></script>
+  <script src="js/appwy.js"></script>
+  <title>话题</title>
+  <style>
+    img{
+      display:block;
+      max-width:100%;
+    }
+    .tabs-top>.tabs,.tabs.tabs-top{
+      top:0;
+      width:60%;
+      z-index:10;
+      height:45px;
+
+    }
+    .tabs-striped .tabs{
+      background-color:rgb(239,71,58);
+      color:white;
+      padding-left:10px;
+    }
+    .tabs-striped .tab-item.activated, .tabs-striped .tab-item.active, .tabs-striped .tab-item.tab-item-active{
+          border-bottom:white 3px solid;
+    }
+    .has-tabs-top{
+      top:55px;
+    }
+  </style>
+</head>
+<body>
+<!--顶部-->
+<div style="overflow-y:auto;" class="bar bar-header bar-assertive">
+  <div class="item-icon-right">
+    <i style="font-size:30px;"  class="icon ion-android-person"></i>
+    <i style="font-size:30px;" class="icon ion-ios-search"></i>
+  </div>
+</div>
+<ion-tabs class="has-footer" >
+  <ion-tab   title="问吧">
+    <ion-view >
+      <ion-content style="overflow-y: auto;" overflow-scroll="false" ng-controller="resh">
+        <div style="width:90%;margin:auto;">
+          <ion-refresher pulling-text="正在加载。。。" on-refresh="doRefresh()">
+          </ion-refresher>
+          <div style="padding-left:10px;border:solid 1px lightgrey;" class="row">
+            <div class="col"><img style="width:30px;height:30px;"  src="img/music.png" alt=""><span style="font-size:12px;color:gray;padding-left:3px;padding-left:3px;">娱乐</span></div>
+            <div class="col"><img style="width:30px;height:30px;" src="img/ds.png" alt=""><span style="font-size:12px;color:gray;padding-left:3px;">教育</span></div>
+            <div class="col"><img style="width:30px;height:30px;"  src="img/music.png" alt=""><span style="font-size:12px;color:gray;padding-left:3px;">科技</span></div>
+            <div class="col"><img style="width:30px;height:30px;" src="img/ds.png" alt=""><span style="font-size:12px;color:gray;padding-left:3px;">生活</span></div>
+            <div class="col"><img style="width:30px;height:30px;"  src="img/music.png" alt=""><span style="font-size:12px;color:gray;padding-left:3px;">旅游</span></div>
+          </div>
+            <ul style="margin-top:10px;border:solid 1px lightgrey; "  class="list">
+          <li style="background:rgba(255,255,255,0);border:0;" class="item item-avatar-left">
+            <img style="border:solid 3px white;" src="img/1.jpg" alt="">
+            <h5>英国文化教育处/英国文化教育处</h5>
+          </li>
+          <img style="position:relative;top:-30px;" src="img/4.jpg" alt="">
+          <p style="position:relative;top:-30px;padding:10px;">我们是英国大使馆文化教育处，关于留英动态、签证信息、英国教育等相关问题，问。。</p>
+          <span style="position:relative;font-size:10px;top:-30px;color:blue;padding-left:10px;">教育</span>
+          <span style="position:relative;font-size:10px;top:-30px;color:gray;border-left:solid 1px gray;border-right:solid 1px gray;padding:0 5px;">1451关注</span>
+          <span style="position:relative;font-size:10px;top:-30px;color:gray;">42提问</span>
+          <span style="position:relative;top:-30px;left:90px;font-size:12px;background:red;padding:5px;color:white;border-radius:10px;">+ &#X3000;关注</span>
+        </ul>
+
+          <ul style="margin-top:10px;border:solid 1px lightgrey; "  class="list">
+            <li style="background:rgba(255,255,255,0);border:0;" class="item item-avatar-left">
+              <img style="border:solid 3px white;" src="img/1.jpg" alt="">
+              <h5>英国文化教育处/英国文化教育处</h5>
+            </li>
+            <img style="position:relative;top:-30px;" src="img/4.jpg" alt="">
+            <p style="position:relative;top:-30px;padding:10px;">我们是英国大使馆文化教育处，关于留英动态、签证信息、英国教育等相关问题，问。。</p>
+            <span style="position:relative;font-size:10px;top:-30px;color:blue;padding-left:10px;">教育</span>
+            <span style="position:relative;font-size:10px;top:-30px;color:gray;border-left:solid 1px gray;border-right:solid 1px gray;padding:0 5px;">1451关注</span>
+            <span style="position:relative;font-size:10px;top:-30px;color:gray;">42提问</span>
+            <span style="position:relative;top:-30px;left:90px;font-size:12px;background:red;padding:5px;color:white;border-radius:10px;">+ &#X3000;关注</span>
+          </ul>
+
+        </div>
+        <div style="width:10px;height:55px;"></div>
+      </ion-content>
+
+    </ion-view>
+  </ion-tab>
+
+  <ion-tab title="话题">
+    <ion-view>
+        <ion-content overflow-scroll="false" ng-controller="resh">
+          <div style="width:90%;margin:auto;">
+            <ion-refresher pulling-text="正在加载。。。" on-refresh="doRefresh()">
+            </ion-refresher>
+            <!--<div style="padding-left:10px;border:solid 1px lightgrey;" class="row">-->
+              <!--<div  class="col"><img style="width:30px;height:30px;"  src="img/music.png" alt=""><span style="font-size:12px;color:gray;padding-left:3px;padding-left:3px;">娱乐</span></div>-->
+              <!--<div class="col"><img style="width:30px;height:30px;" src="img/ds.png" alt=""><span style="font-size:12px;color:gray;padding-left:3px;">教育</span></div>-->
+              <!--<div class="col"><img style="width:30px;height:30px;"  src="img/music.png" alt=""><span style="font-size:12px;color:gray;padding-left:3px;">科技</span></div>-->
+              <!--<div class="col"><img style="width:30px;height:30px;" src="img/ds.png" alt=""><span style="font-size:12px;color:gray;padding-left:3px;">生活</span></div>-->
+              <!--<div class="col"><img style="width:30px;height:30px;"  src="img/music.png" alt=""><span style="font-size:12px;color:gray;padding-left:3px;">旅游</span></div>-->
+            <!--</div>-->
+            <!--<ul style="margin-top:10px;border:solid 1px lightgrey; "  class="list">-->
+              <!--<li style="background:rgba(255,255,255,0);border:0;" class="item item-avatar-left">-->
+                <!--<img style="border:solid 3px white;" src="img/1.jpg" alt="">-->
+                <!--<h5>英国文化教育处/英国文化教育处</h5>-->
+              <!--</li>-->
+              <!--<img style="position:relative;top:-30px;" src="img/4.jpg" alt="">-->
+              <!--<p style="top:-30px;padding:10px;">我们是英国大使馆文化教育处，关于留英动态、签证信息、英国教育等相关问题，问。。</p>-->
+              <!--<span style="font-size:10px;top:-20px;color:blue;padding-left:10px;">教育</span>-->
+              <!--<span style="font-size:10px;top:-30px;color:gray;border-left:solid 1px gray;border-right:solid 1px gray;padding:0 5px;">1451关注</span>-->
+              <!--<span style="font-size:10px;top:-30px;color:gray;">42提问</span>-->
+              <!--<span style="top:-30px;left:90px;font-size:12px;background:red;padding:5px;color:white;border-radius:10px;">+ &#X3000;关注</span>-->
+            <!--</ul>-->
+            这是话题的区域
+          </div>
+          <div style="width:10px;height:55px;"></div>
+        </ion-content>
+    </ion-view>
+  </ion-tab>
+  <ion-tab title="关注">
+    <ion-view>
+      <ion-content>
+        内容3
+      </ion-content>
+    </ion-view>
+  </ion-tab>
+</ion-tabs>
+
+
+<!--底部tabs导航-->
+<div class="tabs tabs-stable tabs-icon-top">
+  <a class="tab-item " href="网易首页.html">
+    <i class="icon ion-ios-paper "></i>新闻
+  </a>
+  <a class="tab-item  " href="直播.html">
+    <i class="icon ion-social-youtube "></i>直播
+  </a>
+  <a class="tab-item assertive active" href="话题.html">
+    <i class="icon ion-android-hangout assertive" ></i>话题
+  </a>
+  <a class="tab-item" href="我.html">
+    <i class="icon ion-android-person"></i>我
+  </a>
+</div>
+</body>
+</html>
